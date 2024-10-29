@@ -25,7 +25,8 @@ To use this boilerplate:
    [Node.js/npm is also required.](https://nodejs.org/en/)
 2. Run cookiecutter on the boilerplate repo:
     ```
-    $ cookiecutter gh:plotly/dash-component-boilerplate
+    $ cd ~/git
+    $ cookiecutter mccarthysean/dash-component-boilerplate
     ```
 3. Answer the questions about the project.
     - `project_name`: This is the "human-readable" name of your project. For example, "Dash Core Components".
