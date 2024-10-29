@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "{{cookiecutter.project_shortname}}"
+version = "0.0.1"
+description = "{{ cookiecutter.description }}"
+authors = ["{{ cookiecutter.author_name }}"]
+license = "{% set _license_identifiers = {'MIT License': 'MIT','BSD License': 'BSD','ISC License': 'ISC','Apache Software License 2.0': 'Apache-2.0','GNU General Public License v3': 'GPL-3.0','Not open source': ''} %}{{ _license_identifiers[cookiecutter.license] }}"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+dash = {version = ">=2.0.0", extras = ["dev"]}
+
+
+[tool.poetry.group.dev.dependencies]
+dash = {extras = ["dev", "testing"], version = "^2.18.1"}
+pytest-cookies = "^0.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

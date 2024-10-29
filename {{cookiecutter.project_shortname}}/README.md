@@ -17,13 +17,16 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 If you have selected install_dependencies during the prompt, you can skip this part.
 
-1. Install npm packages
+1. Install npm packages with yarn
     ```
-    $ npm install
+    $ yarn install
     ```
-2. Create a virtual env and activate.
+2. Create a virtual environment with poetry, and install Python packages
     ```
-    $ virtualenv venv
+    $ poetry config virtualenvs.create true
+    $ poetry config virtualenvs.in-project true
+    $ poetry config virtualenvs.path "/workspace/.venv"
+    $ poetry install --no-interaction --no-ansi
     $ . venv/bin/activate
     ```
     _Note: venv\Scripts\activate for windows_
